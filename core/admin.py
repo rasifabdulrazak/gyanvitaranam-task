@@ -2,10 +2,7 @@ from django.contrib import admin
 from .models import Company, Employee, ProfilePic
 from django.utils.html import format_html
 from import_export.admin import ImportExportModelAdmin
-from django import forms
 from .resource import EmployeeResource
-from django.shortcuts import render
-from django.db.models import Count
 
 
 class ImageAdmin(admin.ModelAdmin):

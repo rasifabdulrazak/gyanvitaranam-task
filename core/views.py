@@ -1,5 +1,4 @@
-from django.shortcuts import render
-from rest_framework import viewsets, generics, views
+from rest_framework import viewsets, generics
 from .models import Company, Employee, ProfilePic
 from .serializer import (
     CompanySerializer,
@@ -8,8 +7,7 @@ from .serializer import (
     UserRegisterSerializer,
     UserLoginSerializer,
 )
-from rest_framework import filters, status
-from django_filters.rest_framework import DjangoFilterBackend
+from rest_framework import status
 from rest_framework.parsers import FormParser, MultiPartParser
 from rest_framework.authtoken.models import Token
 from django.contrib.auth import authenticate
@@ -17,9 +15,7 @@ from rest_framework.response import Response
 from rest_framework.permissions import AllowAny
 from django.contrib.auth import get_user_model
 from rest_framework.authentication import TokenAuthentication
-from import_export import resources,fields
-from import_export.widgets import ForeignKeyWidget
-from django import forms
+
 
 
 User = get_user_model()
